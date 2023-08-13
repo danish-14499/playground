@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <div class="box" id="time">
+      <h1> <%=today%> TODO List</h1>         
+     </div>
+    
+    <div class="box" id="container">
+        
+            <% for(let i=0;i<newtextitems.length;i++){ %>
+                <div class="item">
+                <input type="checkbox">
+                <p><%=newtextitems[i]%></p>
+             </div>
+                      
+            <%}%>
+       <form action="/" method="post">
+        <input type="text" name="txt" placeholder="Add Items">
+        <button type="submit" value="submit">+</button>
+       </form>
+    </div>
+   
+       
+</body>
+</html>
